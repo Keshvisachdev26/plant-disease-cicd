@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plant-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: plant-app
+  template:
+    metadata:
+      labels:
+        app: plant-app
+    spec:
+      containers:
+      - name: plant-app
+        image: IMAGE_PLACEHOLDER
+        ports:
+        - containerPort: 8501
+        resources:
+          requests:
+            memory: "1Gi"
+          limits:
+            memory: "2Gi"
+        readinessProbe:
+          httpGet:
+            path: /_stcore/health
+            port: 8501
+          initialDelaySeconds: 20
+          periodSeconds: 10
