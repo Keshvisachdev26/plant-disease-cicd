@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    IMAGE = keshvi123/plant-disease-app"
+    IMAGE = "keshvi123/plant-disease-app"
     TAG   = "${BUILD_NUMBER}"
   }
   stages {
