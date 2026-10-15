@@ -175,7 +175,7 @@ def result_html(probs, class_names):
 # ---------------- UI ----------------
 st.markdown(
     '<div class="hero"><h1><span class="leaf">🌿</span> Smart Plant Disease Identifier</h1>'
-    '<p>Upload a leaf photo and let deep learning diagnose it in seconds</p></div>',
+    '<p>Upload a leaf photo and let deep learning diagnose it in seconds(version 2.0)</p></div>',
     unsafe_allow_html=True,
 )
 
